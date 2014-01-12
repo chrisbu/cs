@@ -1,5 +1,3 @@
-
-
 void main() {
   runEx("1.1",ex1);
   runEx("1.2",ex2);
@@ -17,7 +15,8 @@ void main() {
   runEx("1.14",ex14);
   runEx("1.15",ex15);
   runEx("1.16",ex16);
-  runEx("1.17",ex17);
+  //runEx("1.17",ex17);
+  runEx("1.18",ex18);
 }
 
 runEx(name, ex) {
@@ -100,4 +99,16 @@ ex17() {
   // new
   hero = 555;
   print(hero.toUpperCase());
+}
+
+ex18() {
+  var hero = "Dartman";
+  if (hero is String) {
+    print("it's a string");
+  }
+  
+  hero = 123.2;
+  if (hero is num) {
+    print("now it's a number");
+  }
 }
