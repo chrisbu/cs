@@ -1,4 +1,8 @@
+var topLevel = "top level";
+
 void main() {
+  var topLevel = "local";
+  print(topLevel);
   runEx("1.1",ex1);
   runEx("1.2",ex2);
   runEx("1.3",ex3);
@@ -24,7 +28,24 @@ runEx(name, ex) {
  ex();
 }
 
-ex1() => print("Hello Super Dart");
+ex1() {
+  print("Hello Super Dart");
+  print(null.toString());
+  print(null);
+  var x = 123.toString();
+  print("Hello " + "Dart" + x);
+  print(911.toString());
+  int i;
+  print("I is $i");
+  print(new Object());
+  print("Dartman".runtimeType);
+  "Dartman".toUpperCase();
+  var heroes = [];
+  var sidekicks = new List();
+  print("Heroes is a ${heroes.runtimeType}");
+  print("Sidekicks is a ${sidekicks.runtimeType}");
+
+}
 
 ex2() => print("""Hello
 Super
@@ -46,7 +67,7 @@ ex9() => print(true == 0);
 
 ex10() {
   var hero;
-  print(hero);
+  print(hero); 
 }
 ex11() {
   var hero = "Dartman";

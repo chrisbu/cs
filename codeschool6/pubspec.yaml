@@ -1,0 +1,6 @@
+name: sample_pubspec
+description: A sample application
+dependencies:
+  logging: any
+dev_dependencies:
+  unittest: any

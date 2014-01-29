@@ -8,7 +8,11 @@ void main() {
   runEx("3.7",ex7);
   runEx("3.8",ex8);
   runEx("3.9",ex9);
-  
+  runEx("3.10",ex10);
+  runEx("3.11",ex11);
+  runEx("3.12",ex12);
+  runEx("3.13",ex13);
+  runEx("3.14",ex14);
 }
 
 runEx(name, ex) {
@@ -104,9 +108,52 @@ ex8() {
 
 ex9() {
   var heroes = [];
-  var villains = new List(2);
-  villains.remove("foo");
+  List villains = new List<String>.filled(2,"Foo");
+//  villains.remove("foo"); fails - because you can't remove an item from a list.
+  print(villains.runtimeType);
 
   print(heroes);
   print(villains);
+}
+
+
+
+
+
+ex10() {
+ var heroMap = {"Dartman":"Hero"};
+ print(heroMap);
+  
+}
+
+ex11() {
+ var heroMap = {"Dartman":"Hero"};
+ var status = heroMap['Captain Dart'];
+ print(status);
+  
+}
+
+ex12() {
+ var heroMap = {"Dartman":"Hero"};
+ heroMap["Captain Dart"] = "Hero";
+ print(heroMap);
+  
+}
+
+
+ex13() {
+  var heroMap = {"Dartman":"Hero", "Captain Dart": "Hero"};
+  var villainsMap = {"Dr Slow": "Villain", "Major Unreadable": "Villain"};
+  heroMap.addAll(villainsMap);   
+  print(heroMap.keys); 
+  print(heroMap.values);
+  
+  for (var key in heroMap.keys){
+    print(heroMap[key]);
+  }
+}
+
+ex14() {
+  var heroMap = <String,String>{};
+  //heroMap["Dartman"] = 911;
 }
